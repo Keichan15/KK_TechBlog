@@ -1,113 +1,147 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <section>
+      <div className="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+            Keichan's Tech Blog
+          </h1>
+          <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
+            日々学んだことの備忘録
+          </p>
+        </div>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid max-w-lg gap-5 mx-auto lg:grid-cols-3 lg:max-w-none">
+            <div className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div className="flex-shrink-0">
+                <img
+                  className="object-cover w-full h-48"
+                  src="https://images.unsplash.com/photo-1561654791-00316c79efa8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=60"
+                  alt=""
+                />
+              </div>
+              <div className="flex flex-col justify-between flex-1 p-6 bg-white">
+                <div className="flex-1">
+                  <a href="#" className="block mt-2">
+                    <p className="text-xl font-semibold text-neutral-600">
+                      Boost your conversion rate
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto accusantium praesentium eius, ut atque fuga
+                      culpa, similique sequi cum eos quis dolorum.
+                    </p>
+                  </a>
+                </div>
+                <div className="flex items-center mt-6">
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-neutral-600">
+                      <a
+                        href="https://twitter.com/Mike_Andreuzza"
+                        className="hover:underline"
+                      >
+                        {" "}
+                        Michaerl Andreuzza
+                      </a>
+                    </p>
+                    <div className="flex space-x-1 text-sm text-gray-500">
+                      <time dateTime="2020-03-16"> Mar 16, 2020 </time>
+                      <span aria-hidden="true"> · </span>
+                      <span> 6 min read </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div className="flex-shrink-0">
+                <img
+                  className="object-cover w-full h-48"
+                  src="https://images.unsplash.com/photo-1510166089176-b57564a542b1?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2024&amp;q=80"
+                  alt=""
+                />
+              </div>
+              <div className="flex flex-col justify-between flex-1 p-6 bg-white">
+                <div className="flex-1">
+                  <a
+                    href="https://twitter.com/g_perales"
+                    className="block mt-2"
+                  >
+                    <p className="text-xl font-semibold text-neutral-600">
+                      How to use search engine optimization to drive sales
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Velit facilis asperiores porro quaerat doloribus, eveniet
+                      dolore. Adipisci tempora aut inventore optio animi.,
+                      tempore temporibus quo laudantium.
+                    </p>
+                  </a>
+                </div>
+                <div className="flex items-center mt-6">
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-neutral-600">
+                      <a href="#" className="hover:underline">
+                        {" "}
+                        Gabriel Perales{" "}
+                      </a>
+                    </p>
+                    <div className="flex space-x-1 text-sm text-gray-500">
+                      <time dateTime="2020-03-10"> Mar 10, 2020 </time>
+                      <span aria-hidden="true"> · </span>
+                      <span> 4 min read </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div className="flex-shrink-0">
+                <img
+                  className="object-cover w-full h-48"
+                  src="https://images.unsplash.com/photo-1516245556508-7d60d4ff0f39?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=60"
+                  alt=""
+                />
+              </div>
+              <div className="flex flex-col justify-between flex-1 p-6 bg-white">
+                <div className="flex-1">
+                  <a href="#" className="block mt-2">
+                    <p className="text-xl font-semibold text-neutral-600">
+                      Improve your customer experience
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sint harum rerum voluptatem quo recusandae magni placeat
+                      saepe molestiae, sed excepturi cumque corporis perferendis
+                      hic.
+                    </p>
+                  </a>
+                </div>
+                <div className="flex items-center mt-6">
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-neutral-600">
+                      <a
+                        href="https://twitter.com/wickedlabsHQ"
+                        className="hover:underline"
+                      >
+                        {" "}
+                        Wicked Labs{" "}
+                      </a>
+                    </p>
+                    <div className="flex space-x-1 text-sm text-gray-500">
+                      <time dateTime="2020-02-12"> Feb 12, 2020 </time>
+                      <span aria-hidden="true"> · </span>
+                      <span> 11 min read </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </section>
+  );
 }
