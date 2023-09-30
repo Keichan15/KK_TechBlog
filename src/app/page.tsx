@@ -4,6 +4,7 @@ import { getList } from "../../libs/microcms";
 
 export default async function Page() {
   const { contents } = await getList();
+
   console.log(contents);
 
   if (!contents || contents.length === 0) {
@@ -26,8 +27,8 @@ export default async function Page() {
           {contents.map((post) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <div>
-                <Link href={"/articles"}>
+              <div key={post.id}>
+                <Link href={`/articles/${post.id}`}>
                   <div className="flex-shrink-0">
                     <img
                       className="object-cover w-full h-48"
@@ -38,7 +39,7 @@ export default async function Page() {
                 </Link>
                 <div className="flex flex-col justify-between flex-1 p-6 bg-white">
                   <div className="flex-1">
-                    <Link href={"/articles"}>
+                    <Link href={`/articles/${post.id}`}>
                       <p className="text-xl font-semibold text-neutral-600">
                         {post.title}
                       </p>
