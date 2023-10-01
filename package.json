@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@uiw/react-md-editor": "^3.23.6",
     "cheerio": "^1.0.0-rc.12",
     "html-react-parser": "^4.2.2",
+    "microcms-field-extension-react": "^1.0.0",
     "microcms-js-sdk": "^2.6.1",
     "next": "latest",
+    "next-remove-imports": "^1.0.12",
     "preline": "^1.9.0",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "zenn-content-css": "^0.1.146",
+    "zenn-markdown-html": "^0.1.146"
   },
   "devDependencies": {
     "@types/node": "latest",

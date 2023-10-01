@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <header>Header</header>
-        <div className="bg-gray-100 m-1 mt-5 rounded-lg">
+        <div className="m-1 mt-5 rounded-lg">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-5">
             {children}
           </div>

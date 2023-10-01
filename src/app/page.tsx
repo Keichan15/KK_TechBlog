@@ -4,7 +4,6 @@ import { getList } from "../../libs/microcms";
 
 export default async function Page() {
   const { contents } = await getList();
-
   console.log(contents);
 
   if (!contents || contents.length === 0) {
