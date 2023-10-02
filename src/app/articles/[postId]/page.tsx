@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../../libs/microcms";
+import markdownHtml from "zenn-markdown-html";
+import "zenn-content-css";
 
 export async function generateStaticParams() {
   const { contents } = await getList();
@@ -29,10 +31,12 @@ export default async function StaticDetailPage({
     notFound();
   }
 
+  const html = markdownHtml(post.content);
+
   return (
     <div className="lg:col-span-2">
-      <div className="markdown">
-        <div>{parse(post.content)}</div>
+      <div className="znc">
+        <div>{parse(html)}</div>
       </div>
     </div>
   );
