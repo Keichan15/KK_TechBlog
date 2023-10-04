@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../../libs/microcms";
 import markdownHtml from "zenn-markdown-html";
-import "zenn-content-css";
+import { load } from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/night-owl.css";
 
 export async function generateStaticParams() {
   const { contents } = await getList();
@@ -31,13 +33,22 @@ export default async function StaticDetailPage({
     notFound();
   }
 
-  const html = markdownHtml(post.content);
+  let html = markdownHtml(post.content);
+
+  const $ = load(html);
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
+  html = $.html();
 
   return (
     <div className="lg:col-span-2">
-      <div className="znc">
-        <div>{parse(html)}</div>
-      </div>
+      <div
+        className="markdown"
+        dangerouslySetInnerHTML={{ __html: html }}
+      ></div>
     </div>
   );
 }
