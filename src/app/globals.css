@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+div.code-block-container {
+  margin-top: 20px;
+}
+
+span.code-block-filename {
+  color: #2c3e50; /* Matching text color */
+  background-color: #ecf0f1;
+  padding: 0.25rem 0.5rem;
+  border-bottom-right-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: absolute;
+}
+
 .markdown h1 {
   margin-top: 50px;
   font-size: 1.9rem;
@@ -16,7 +30,7 @@
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-left: 5px solid #3498db; /* Vibrant blue border */
+  border-left: 3px solid #323232; /* Vibrant blue border */
   padding-left: 0.5rem;
   color: #2c3e50; /* Matching color */
   background-color: #ffffff; /* Subtle grey background */
@@ -76,7 +90,7 @@
   overflow-x: auto;
   color: #ecf0f1; /* Light text color */
   margin-bottom: 30px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .markdown pre > code {
@@ -100,15 +114,15 @@
 }
 
 .markdown div div[data-filename]::before {
-  content: attr(data-filename); /* data-filename属性の値を表示 */
-  color: #2c3e50; /* Matching text color */
-  background-color: #ecf0f1; /* Subtle grey background */
+  /* content: attr(data-filename);
+  color: #2c3e50; 
+  background-color: #ecf0f1; 
   padding: 0.25rem 0.5rem;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 0.75rem;
   font-weight: bold;
-  position: absolute;
+  position: absolute; */
 }
 
 .markdown blockquote {
