@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import parse from "html-react-parser";
 import { getDetail, getList } from "../../../../libs/microcms";
 import markdownHtml from "zenn-markdown-html";
 import { load } from "cheerio";
@@ -27,7 +26,7 @@ export default async function StaticDetailPage({
   console.log(post);
 
   // ページの生成された時間を取得
-  const time = new Date().toLocaleString();
+  // const time = new Date().toLocaleString();
 
   if (!post) {
     notFound();
