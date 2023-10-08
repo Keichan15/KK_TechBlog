@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.427.0",
     "@uiw/react-md-editor": "^3.23.6",
     "cheerio": "^1.0.0-rc.12",
+    "cuid": "^3.0.0",
+    "formidable": "^3.5.1",
     "highlight.js": "^11.8.0",
     "html-react-parser": "^4.2.2",
     "microcms-field-extension-react": "^1.0.0",
@@ -24,6 +27,7 @@
     "zenn-markdown-html": "^0.1.146"
   },
   "devDependencies": {
+    "@types/formidable": "^3.4.3",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
