@@ -1,4 +1,5 @@
 import Image from "next/image";
+import localImage from "../../public/language/rails.svg";
 import Link from "next/link";
 import { getList } from "../../libs/microcms";
 
@@ -21,40 +22,80 @@ export default async function Page() {
             日々学んだことの備忘録
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {" "}
-          {contents.map((post) => {
-            return (
-              // eslint-disable-next-line react/jsx-key
-              <div key={post.id}>
+
+        <div className="relative">
+          <div className="relative flex justify-start">
+            <span className="pr-3 text-lg font-medium text-neutral-600 bg-white">
+              All Issues
+            </span>
+          </div>
+        </div>
+        {contents.map((post) => {
+          return (
+            <>
+              <div className="space-y-8 divide-y divide-gray-100">
                 <Link href={`/articles/${post.id}`}>
-                  <div className="flex-shrink-0">
-                    <img
-                      className="object-cover w-full h-48"
-                      src="https://images.unsplash.com/photo-1561654791-00316c79efa8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=60"
-                      alt=""
-                    />
-                  </div>
-                </Link>
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white">
-                  <div className="flex-1">
-                    <Link href={`/articles/${post.id}`}>
-                      <p className="text-xl font-semibold text-neutral-600">
+                  <div className="pt-8 sm:flex lg:items-end group">
+                    <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-4">
+                      <Image
+                        className="w-full rounded-md h-32 lg:w-32 object-cover"
+                        src={localImage}
+                        alt="text"
+                      />
+                    </div>
+                    <div>
+                      <span className="text-sm text-gray-500">
+                        August 20.20.21
+                      </span>
+                      <p className="mt-3 text-lg font-medium leading-6">
                         {post.title}
                       </p>
-                    </Link>
-                    <p className="mt-3 text-base text-gray-500">カテゴリ</p>
+                      <p className="mt-2 text-lg text-gray-500">
+                        A wonderful serenity has taken possession of my entire
+                        soul, like these sweet mornings of spring which I enjoy
+                        with my whole heart.
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center mt-6">
-                    <div>
-                      <p className="text-sm font-medium text-gray-500">タグ</p>
+                </Link>
+              </div>
+            </>
+          );
+        })}
+
+        {/* {contents.map((post) => {
+          return (
+            <>
+              <Link href={`/articles/${post.id}`}>
+                <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4 bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+                  <div className="flex-shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs">
+                    <Image
+                      className="w-full h-full absolute top-0 left-0 object-cover"
+                      src={localImage}
+                      alt="Image Description"
+                    />
+                  </div>
+                  <div className="flex flex-wrap">
+                    <div className="p-4 flex flex-col h-full sm:p-7">
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                        Card title
+                      </h3>
+                      <p className="mt-1 text-gray-800 dark:text-gray-400">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <div className="mt-5 sm:mt-auto">
+                        <p className="text-xs text-gray-500 dark:text-gray-500">
+                          Last updated 5 mins ago
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              </Link>
+            </>
+          );
+        })} */}
       </div>
       <div className="lg:col-span-1"></div>
     </>
