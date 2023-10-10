@@ -19,9 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header>Header</header>
         <div className="m-1 mt-5 rounded-lg">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-5">
-            {children}
-          </div>
+          <div className="grid lg:grid-cols-3 gap-4 pb-5">{children}</div>
         </div>
         <footer>Footer</footer>
       </body>
