@@ -3,6 +3,7 @@ import localImage from "../../public/language/rails.svg";
 import Link from "next/link";
 import { getList } from "../../libs/microcms";
 import Index from "./components/Index";
+import Sidebar from "./components/Sidebar/sidebar";
 
 export default async function Page() {
   const { contents } = await getList();
@@ -12,5 +13,10 @@ export default async function Page() {
     return <h1>No contents</h1>;
   }
 
-  return <Index></Index>;
+  return (
+    <>
+      <Index></Index>
+      <Sidebar></Sidebar>
+    </>
+  );
 }
